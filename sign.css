@@ -1,0 +1,256 @@
+@font-face {
+    font-family:"Product_Sans_Bold_Italic" ;
+    src: url(product-sans\Product_Sans_Bold_Italic.ttf) format('truetype');
+}
+@font-face {
+    font-family:"Product_Sans_Bold" ;
+    src: url(pproduct-sans\Product_Sans_Bold.ttf) format('truetype');
+}
+@font-face {
+    font-family:"Product_Sans_Italic" ;
+    src: url(product-sans\Product_Sans_Italic.ttf) format('truetype');
+}
+@font-face {
+    font-family:"Product_Sans_Regular" ;
+    src: url(product-sans\Product_Sans_Regular.ttf) format('truetype');
+}
+*{
+    margin:0px; 
+    padding:0px; 
+    box-sizing:border-box;  
+    font-family:'Product_Sans_Bold';
+}
+
+body{
+    height:100vh; 
+    width:100vw; 
+    background:rgb(0, 0, 0); 
+    position:absolute; 
+    transition:.5s ease; 
+}
+
+body.active{
+    background:rgb(12, 0, 39); 
+}
+
+.container{
+    position:relative;  
+    height:45%; 
+    width:60%;  
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-50%); 
+    display:flex; 
+    align-items:center; 
+    justify-content:space-around; 
+    border-radius:0px; 
+    box-shadow:5px 5px 45px rgba(0,0,0,.1); 
+    padding:30px;  
+    transition:2s ease; 
+    background:rgba(255,255,255,.1);  
+}
+
+.signin , .signup{ 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-around; 
+    align-items:center; 
+    height:60%;     
+    width:50%; 
+    padding:20px 50px; 
+    z-index:2; 
+}
+
+#signbtn , #regbtn{ 
+    font-size:20px; 
+    outline:none; 
+    padding:10px 15px; 
+    background:transparent; 
+    font-weight:500;   
+    background:white; 
+    color:black; 
+    border:none; 
+    border-radius:5px; 
+    cursor:pointer; 
+}
+
+.signin h3 , .signup h3{
+    font-family:monospace; 
+    letter-spacing:2px; 
+    font-size:25px; 
+    word-spacing:5px; 
+    word-wrap: break-word;
+    text-align:center; 
+    line-height: 50px;
+    font-weight:500; 
+    color:white; 
+}
+
+.formcover{
+    position:absolute; 
+    height:150%; 
+    width:50%;
+    background:white;    
+    border-radius:0px; 
+    top:-25%; 
+    left:0; 
+    box-shadow:3px 3px 30px rgba(0,0,0,.3);   
+    z-index:10;    
+    display:flex; 
+    align-items:center; 
+    justify-content:center; 
+    overflow:hidden; 
+    transition:.5s ease; 
+}
+
+.formcover.active{
+    left:50%; 
+}
+
+
+.formcover .form{ 
+    position:absolute; 
+    left:0;  
+    width:100%; 
+    padding:20px;
+    height:100%; 
+    overflow:hidden; 
+    transition:.5s ease;     
+}
+
+.form form{
+    height:80%; 
+    width:100%; 
+    display:flex; 
+    flex-direction:column; 
+    justify-content:space-around; 
+    align-items:center; 
+    margin-top:50px; 
+}
+
+.form form h3{
+    text-transform: uppercase; 
+    letter-spacing : 2px; 
+    font-size:30px; 
+    font-weight:500; 
+}
+
+.form form input{
+    background:transparent; 
+    font-size:30px; 
+    outline:none; 
+    border:none; 
+    border-bottom:2px solid rgb(41, 41, 41); 
+    padding:5px 10px; 
+    font-family:monospace; 
+}
+
+.form form input::placeholder{
+    opacity:0.5; 
+    letter-spacing: 5px; ;
+}
+
+#loginbtn{
+    font-size:25px;  
+    padding:10px 20px; 
+    outline:none; 
+    letter-spacing:3px; 
+    background-color: white; 
+    text-transform:uppercase; 
+    background:#000000; 
+    border:none; 
+    color:white; 
+}
+
+.form.signinbox form a{
+    text-decoration:underline;  
+} 
+
+.formcover.active  .signinbox{
+    left:-200%;   
+    opacity:0;  
+}
+
+
+.signupbox form{
+    height:90%; 
+    margin-top: 30px; 
+}
+
+.signupbox form input{
+    font-size:25px; 
+}
+
+.signupbox form input::placeholder{
+    font-size:20px; 
+}
+
+.signupbox form #submitbtn{
+    font-size:25px; 
+    padding:10px 20px; 
+    outline:none; 
+    border:none; 
+    background:rgb(0,0,0); 
+    color:white;
+    cursor:pointer;   
+}
+
+.formcover.active .signupbox{  
+    left:0; 
+    opacity:1; 
+}
+.formcover .signupbox{    
+    left:200%; 
+    transition:0.5s ; 
+}
+
+#forgot{
+    font-family:cursive; 
+    text-decoration:none; 
+    font-size:20px; 
+    color:#000000;  
+}
+
+.menu{
+    position:absolute; 
+    top:0; 
+    width:30%;    
+    height:10%;
+    left:50%; 
+    border-bottom-left-radius: 20px; 
+    border-bottom-right-radius:20px; 
+    transform:translateX(-50%);   
+    background:white; 
+    box-shadow: 0px 2px 20px rgba(0,0,0,0.5); 
+    display:flex;  
+    align-items:center; 
+}
+
+.logo i{
+    font-size:40px;   
+    font-family:'Ariel'; 
+    letter-spacing:5px;
+    font-weight:1000;
+    background: linear-gradient(to right, #000000, #271449);
+    padding:10px 20px;  
+    color:transparent; 
+    -webkit-text-fill:transparent;
+    background-clip: text; 
+    -webkit-background-clip:text;       
+    list-style: 9n;
+}
+
+.logo{
+    position:absolute; 
+    top:50%; 
+    left:50%; 
+    transform:translate(-50%,-55%); 
+    padding:10px 15px;  
+}
+
+a{
+    text-decoration:none; 
+}
+
+
+

@@ -1,0 +1,36 @@
+:root {
+  /* fonts */
+  --font-product-sans: "Product Sans";
+  --font-bebas-neue: "Bebas Neue";
+  --font-andada-pro: "Andada Pro";
+
+  /* font sizes */
+  --font-size-xs: 18px;
+  --font-size-sm: 20px;
+  --font-size-base: 24px;
+  --font-size-lg: 26px;
+  --font-size-xl: 36px;
+  --font-size-2xl: 60px;
+  --font-size-3xl: 64px;
+
+  /* Colors */
+  --color-seashell: #fff6f3;
+  --color-dimgray-100: #6d6d6d;
+  --color-dimgray-200: #666;
+  --color-gray-100: #8f8f8f;
+  --color-gray-200: #1b1b1b;
+  --color-gray-300: rgba(255, 255, 255, 0);
+  --color-crimson: #ff525d;
+  --color-gainsboro: #dcd7d5;
+
+  /* Paddings */
+  --padding-xs: 0.015625px;
+  --padding-sm: 10px;
+  --padding-md: 70px;
+  --padding-lg: 83.8765640258789px;
+
+  /* border radiuses */
+  --br-sm: 7px;
+  --br-md: 10px;
+  --br-lg: 15px;
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hire Up</title>
+</head>
+<body>
+    <div class="container">
+        <span class = 'logo'>Sherlocked</span>
+        <span class = 'slogan'>By detective for detectives</span>   
+    </div>
+    <div class = 'rocket'>  
+    </div>
+    <div class  = 'btn'>
+    <div class = 'moving_detective'>
+        <img src="https://thumbs.gfycat.com/GranularHotJellyfish-max-1mb.gif" alt="" /> 
+    </div>
+        <button type = 'button' id = 'btn'>Login / Sign up</button> 
+    </div> 
+    <style rel = 'stylesheet' type = 'text/css'>
+        *{
+            margin:0px; 
+            padding:0px; 
+            box-sizing:border-box; 
+        }
+
+        body{ 
+            height:100vh; 
+            width:100vw; 
+            background: linear-gradient(to right, #000000, #170a20);
+        }
+
+        .container{
+            position:absolute; 
+            width:100%; 
+            top:0; 
+            left:0; 
+            display:flex; 
+            align-items:center; 
+            justify-content:flex-start;  
+        }
+
+        .container .logo{ 
+            font-size:300px;  
+            height:100%; 
+            width:100%; 
+            text-align:center;   
+            background: linear-gradient(to left, #ffffff, #ffffff);
+            color:transparent; 
+            -webkit-text-fill:transparent; 
+            -webkit-background-clip:text; 
+            background-clip:text; 
+            font-family:'Pacifico';  
+            margin-top: 70px;
+        }
+
+        .container .slogan{
+            position:absolute; 
+            top:15%; 
+            right:10%; 
+            font-size:30px;
+            font-family:monospace;  
+            font-weight:500;  
+            text-transform:uppercase; 
+            letter-spacing : 5px; 
+            word-spacing :10px;
+            background:rgba(98, 98, 98, 0.185);  
+            box-shadow:2px 2px 15px rgba(0,0,0,0.5); 
+            padding :10px 20px; 
+            border-radius:20px; 
+            transition:1s ease; 
+            cursor:pointer; 
+            z-index:2;   
+            color:#d5d5d5cf;
+        }
+
+        .slogan:hover{
+            letter-spacing:10px;   
+        }
+
+        .btn{
+            position:absolute;  
+            bottom:25%;     
+            left:50%; 
+            display:block; 
+            transform:translateX(-50%); 
+            transition:0.5s ease; 
+        }
+
+        .btn button{
+            font-size:40px;
+            padding:20px 30px; 
+            text-transform:uppercase; 
+            color:#ffffff;
+            background-color: #000000;
+            outline:none; 
+            cursor:pointer; 
+            transition:0.5s ease ; 
+            border:0px;
+        }
+
+        .rocket{
+            position:relative;   
+            top:40%; 
+            left:43%; 
+            height:247px;    
+            width:330px;  
+        }
+
+        .rocket img{
+            height:100%; 
+            width:100%; 
+        }
+
+        .moving_detective{
+            position:absolute;   
+            left:-110%; 
+            margin-top: -150px;
+        }
+        .moving_detective img{
+            height:400px;
+            width:400px;
+
+        }
+
+        .btn button:hover{  
+            transform:translateY(-20px); 
+            box-shadow:0px 2px 15px 5px rgba(255, 255, 255,0.2);   
+            text-shadow:0px 2px 15px rgba(255, 255, 255); 
+        }
+
+
+
+
+    </style>
+    <script type = 'text/javascript' defer> 
+        var btn = document.querySelector('#btn'); 
+        var container =  document.querySelector('.rocket'); 
+
+        btn.onclick = function(){
+            var img = document.createElement('img'); 
+            img.src = "rocket.gif"; 
+            container.appendChild(img); 
+            setTimeout(()=>{
+                container.removeChild(img);
+                open('sign.html');  
+            },2250); 
+        }
+    </script> 
+</body>
+</html>
